@@ -1,17 +1,12 @@
 class Parts
-  attr_reader :chain, :tire_size
+  attr_reader :parts
 
-  def initialize(args = {})
-    @chain = args[:chain] || default_chain
-    @tire_size = args[:tire_size] || default_tire_size
-    post_initialize(args)
+  def initialize(parts)
+    @parts = parts
   end
 
   def spares
-    {
-      tire_size: tire_size,
-      chain: chain
-    }.merge(local_spares)
+    parts.select(&:need_spare)
   end
 
   def default_tire_size
