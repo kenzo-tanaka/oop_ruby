@@ -2,7 +2,6 @@ require 'minitest/autorun'
 require_relative '../lib/bicycle'
 require_relative '../lib/parts'
 require_relative '../lib/road_bike_parts'
-require_relative '../lib/mountain_bike'
 require_relative '../lib/mountain_bike_parts'
 
 class BicycleTest < Minitest::Test
