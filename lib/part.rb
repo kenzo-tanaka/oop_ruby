@@ -4,6 +4,6 @@ class Part
   def initialize(args)
     @name = args[:name]
     @description = args[:description]
-    @need_spare = args[:need_spare]
+    @need_spare = args.fetch(:need_spare, true)
   end
 end
