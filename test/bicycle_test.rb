@@ -42,6 +42,6 @@ class BicycleTest < Minitest::Test
   def test_parts_size
     mountain_bike_parts = Parts.new([@chain, @mountain_tire, @front_shock, @rear_shock])
     mountain_bike = Bicycle.new(size: 'L', parts: mountain_bike_parts)
-    assert_equal(3, mountain_bike.parts.size)
+    assert_equal(4, mountain_bike.parts.size)
   end
 end

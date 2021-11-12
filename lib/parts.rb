@@ -9,6 +9,10 @@ class Parts
     parts.select(&:need_spare)
   end
 
+  def size
+    parts.size
+  end
+
   def default_tire_size
     raise NotImplementedError
   end
