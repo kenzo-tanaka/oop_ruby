@@ -3,8 +3,8 @@ class Bicycle
 
   def initialize(args={})
     @size = args[:size]
-    @chain = args[:chain]
-    @tire_size = args[:tire_size]
+    @chain = args[:chain] || default_chain
+    @tire_size = args[:tire_size] || default_tire_size
     post_initialize(args)
   end
 
@@ -22,6 +22,10 @@ class Bicycle
 
   def local_spares
     {}
+  end
+
+  def default_tire_size
+    raise NotImplementedError
   end
 
   def default_chain
